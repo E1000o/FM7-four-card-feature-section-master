@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.outer-container {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(229, 6%, 66%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "header"
+                         "inner-container"
+                         "footer";
+    justify-items: center;
+    align-items: center;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+h1, h2 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+.top-heading {
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+}
+
+.inner-container {
+    grid-area: inner-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "supervisor team-builder calculator"
+                         "supervisor karma calculator";
+    justify-items: center;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.inner-container section {
+    background-color: white;
+    padding: 2.2em;
+    max-width: 350px;
+    position: relative;
+}
+
+.inner-container section p {
+    margin-bottom: 7em;
+}
+
+.inner-container img {
+    position: absolute;
+    right: 2.2em;
+    bottom: 2.2em;
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+    grid-area: team-builder;
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.calculator {
+    grid-area: calculator;
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+.karma {
+    grid-area: karma;
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+footer {
+    grid-area: footer;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 480px) {
+
+    .outer-container {
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-areas: "header"
+        "inner-container"
+        "footer";
+    }
+
+    .inner-container {
+        grid-template-areas:"supervisor"
+                            "team-builder"
+                            "karma"
+                            "calculator";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
