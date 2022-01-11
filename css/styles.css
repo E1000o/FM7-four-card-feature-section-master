@@ -50,7 +50,8 @@ h1 {
 }
 
 .header p {
-    padding: 0 30em;
+    max-width: 504px;
+    margin: 0 auto;
     font-weight: 400;
 }
 
@@ -130,6 +131,10 @@ footer {
         grid-template-areas: "header"
         "inner-container"
         "footer";
+        padding: 2em;
+    }
+
+    .header p {
     }
 
     .inner-container {
