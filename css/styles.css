@@ -84,6 +84,8 @@ h1 {
 
 .inner-container section p {
     margin-bottom: 6.7em;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .inner-container img {
@@ -124,6 +126,19 @@ footer {
      color: hsl(228, 45%, 44%); 
 }
 
+
+
+@media (max-width: 768px) {
+    .inner-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "supervisor team-builder"
+                             "karma calculator";
+    }
+}
+
+
+
 @media (max-width: 480px) {
 
     .outer-container {
@@ -131,10 +146,25 @@ footer {
         grid-template-areas: "header"
         "inner-container"
         "footer";
-        padding: 2em;
+        padding: 3.2em 2em;
+        row-gap: 2.5em;
+    }
+
+    h1 {
+        line-height: 1.7;
+    }
+
+    .top-heading {
+        font-weight: 200;
+        font-size: 1.5rem;
+    }
+    
+    .bottom-heading {
+        font-size: 1.5rem;
     }
 
     .header p {
+        line-height: 1.5;
     }
 
     .inner-container {
@@ -145,5 +175,20 @@ footer {
 
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .inner-container section  {           
+        
+        line-height: 1.8;
+    }
+
+    .inner-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .inner-container section p {
+        font-size: 0.87em;
+        margin-bottom: 5em;
     }
 }
